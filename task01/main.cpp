@@ -1,8 +1,17 @@
 #include <iostream>
+#include "util.h"
 using namespace std;
+#include <ctime>
+
+#define SIZE 20
 
 int main() {
-	cout << "testing..." << endl;
+	srand(time(NULL));
+	int array[SIZE];
+
+	init(array, SIZE, -20, 20);
+
+	cout << "Array: " << convert(array, SIZE) << endl;
 
 	return 0;
 }
